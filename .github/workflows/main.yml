@@ -18,14 +18,19 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Go to project folder
+        run: cd راتبوت   # أو cd RATBot حسب الاسم الحقيقي
+
       - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+        run: chmod +x راتبوت/gradlew
 
       - name: Build APK
-        run: ./gradlew assembleDebug
+        run: |
+          cd راتبوت
+          ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: راتبوت/app/build/outputs/apk/debug/app-debug.apk

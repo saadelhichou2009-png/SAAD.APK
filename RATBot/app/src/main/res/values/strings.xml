@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RATBot</string>
+    <string name="welcome_text">مرحبًا بك في RATBot</string>
+    <string name="request_permissions">طلب الأذونات</string>
+    <string name="start_service">تشغيل الخدمة</string>
+    <string name="service_running">الخدمة تعمل...</string>
+</resources>
